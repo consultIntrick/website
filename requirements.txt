@@ -1,7 +1,7 @@
-pip install decorator==4.0.10
-pip install Django==1.9.2
-pip install django-hitcount==1.2.2
-pip install django-wysiwyg-redactor==0.4.9
-pip install Pillow==3.4.1
-pip install Pygments==2.1.3
-pip install pytz==2016.7
+decorator==4.0.10
+Django==1.9.2
+django-hitcount==1.2.2
+django-wysiwyg-redactor==0.4.9
+Pillow==3.4.1
+Pygments==2.1.3
+pytz==2016.7
