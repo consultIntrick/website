@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Entry, SubscriberNewsletter
+from blog.models import Entry, SubscriberNewsletter
 # from redactor.widgets import RedactorEditor
 
 #

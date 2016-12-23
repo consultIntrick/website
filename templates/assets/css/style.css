@@ -730,7 +730,7 @@ img{
 .team-grid li {
 	display: inline-block;
 	height: 230px;
-	margin: 20px 25px;
+	margin: 50px 25px;
 	width: 20%;
 }
 .team-item {
@@ -751,9 +751,8 @@ img{
 }
 
 .team-img-1 { 
-	background-image: url(../images/team-member1.png);
+	background-image: url('/static/assets/images/Arul.jpg');
 }
-
 .team-img-2 { 
 	background-image: url(../images/team-member2.png);
 }
@@ -853,7 +852,9 @@ img{
 	font-style: italic;
 	font-family: "Raleway",sans-serif;
 }
-
+li.tm-x---m{
+	margin-top: 20px;
+}
 /*--------------------*/
 /* SERVICE */
 /*--------------------*/
