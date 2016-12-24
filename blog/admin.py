@@ -1,5 +1,6 @@
 from django.contrib import admin
-from models import Entry, SubscriberNewsletter, ViewerMessage
+
+from blog.models import Entry, SubscriberNewsletter, ViewerMessage
 
 admin.site.register(Entry)
 admin.site.register(SubscriberNewsletter)

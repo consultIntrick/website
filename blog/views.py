@@ -8,8 +8,8 @@ from hitcount.models import HitCount
 from hitcount.views import HitCountDetailView
 from hitcount.views import HitCountMixin
 
-from models import Entry, SubscriberNewsletter, ViewerMessage
-from utils import get_paginated_objects
+from .models import Entry, SubscriberNewsletter, ViewerMessage
+from .utils import get_paginated_objects
 
 
 class PostCountHitDetailView(HitCountDetailView):
@@ -19,7 +19,7 @@ class PostCountHitDetailView(HitCountDetailView):
 
 def home_view(request):
     try:
-        recent_three_blogs= Entry.objects.all().order_by('-created_at')[:3]
+        recent_three_blogs = Entry.objects.all().order_by('-created_at')[:3]
         template_name = 'index.html'
         return render(request, template_name, {'recent_three_blogs': recent_three_blogs})
     except:
@@ -87,17 +87,17 @@ def get_message_from_viewer(request):
     message = str(request.POST.get('message')).strip()
     ViewerMessage.objects.create(name=name, email=email, message=message)
     email_to_viewer = EmailMessage('Thank you! ' + name,
-                                   'Hi '+name+',\r\n'
-                                              '\r\nThanks for reaching us. Will get back to you shortly.\r\n'
-                                              '\r\n\r\nRegards,\r\n'
-                                              'Intrick Success Team\r\n',
+                                   'Hi ' + name + ',\r\n'
+                                                  '\r\nThanks for reaching us. Will get back to you shortly.\r\n'
+                                                  '\r\n\r\nRegards,\r\n'
+                                                  'Intrick Success Team\r\n',
                                    'Intrick Success Team',
                                    [email],
-                                   reply_to=['support@intrick.com'],)
+                                   reply_to=['support@intrick.com'], )
     email_to_viewer.send(fail_silently=False)
     email_to_intrick = EmailMessage('A message from ' + name + "(" + email + ")",
                                     message,
-                                    'Intrick Success Team',
-                                    ["info.intrick@gmail.com"])
+                                    'Intrick Bot',
+                                    ['support@intrick.com'])
     email_to_intrick.send(fail_silently=False)
     return HttpResponse('success', status=200)
