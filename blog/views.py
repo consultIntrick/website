@@ -98,6 +98,6 @@ def get_message_from_viewer(request):
     email_to_intrick = EmailMessage('A message from ' + name + "(" + email + ")",
                                     message,
                                     'Intrick Bot',
-                                    ['info.intrick@gmail.com'])
+                                    ['info@intrick.com'])
     email_to_intrick.send(fail_silently=False)
     return HttpResponse('success', status=200)
