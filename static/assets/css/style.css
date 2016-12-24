@@ -1,37 +1,3 @@
-/*
-Template Name: Rex
-Author: MarkUps
-Author URI: http://www.markups.io/
-Description: Rex - One Page Multipurpose Business HTML5 Template.
-Version: 1.0
-Tags: light, white,blog,business,multipurpose,one page, single page, custom-colors,Bootstrap,responsive, html5, css3
-*/
-
-/* Table of Content
-==================================================
-#BASIC TYPOGRAPHY
-#HEADER	
-#MENU 
-#ABOUT
-#CALL TO ACTION
-#TEAM   
-#SERVICE
-#PORTFOLIO
-#COUNTER
-#PRICING TABLE
-#TESTIMONIAL
-#FORM BLOG
-#CLIENT
-#CONTACT
-#FOOTER
-#BLOG PAGE
-#ERROR PAGE
-*/
-
-/*--------------------*/
-/* BASIC TYPOGRAPHY */
-/*--------------------*/
-
 body, html {
     overflow-x: hidden;
 }
@@ -76,16 +42,14 @@ img {
     border: none;
 }
 
-/* Preloader */
-
 #preloader {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #fff; /* change if the mask should have another color then white */
-    z-index: 99999; /* makes sure it stays on top */
+    background-color: #fff;
+    z-index: 99999;
 }
 
 .loader {
@@ -150,8 +114,6 @@ img {
     }
 }
 
-/*scrol to top*/
-
 .scrollToTop {
     background: #f9f9f9 none repeat scroll 0 0;
     border-radius: 50%;
@@ -177,10 +139,6 @@ img {
     text-decoration: none;
     outline: none;
 }
-
-/*--------------------*/
-/* HOME HEADER */
-/*--------------------*/
 
 #header {
     float: left;
@@ -282,10 +240,6 @@ img {
     outline: none;
 
 }
-
-/*--------------------*/
-/* MENU */
-/*--------------------*/
 
 #menu-area {
     float: left;
@@ -449,10 +403,6 @@ img {
     opacity: 0.8;
 }
 
-/*--------------------*/
-/* ABOUT */
-/*--------------------*/
-
 #about {
     background-color: #fff;
     padding: 70px 0;
@@ -562,9 +512,6 @@ img {
     float: right;
 }
 
-/*.single-wc-content:hover .wc-tittle{*/
-/*padding-bottom: 16px;	*/
-/*}*/
 .about-area {
     display: inline;
     float: left;
@@ -582,11 +529,8 @@ img {
 }
 
 .about-left img {
-    /*left: 23px;*/
     position: absolute;
-    /*top: 23px;*/
     width: 100%;
-    /*height: 100%;*/
 }
 
 .about-left > div {
@@ -739,10 +683,6 @@ img {
     transform: translate3d(0, -25%, 0);
 }
 
-/*--------------------*/
-/* CALL TO ACTION */
-/*--------------------*/
-
 #call-to-action {
     display: inline;
     float: left;
@@ -778,10 +718,6 @@ img {
     float: none;
     margin-top: 29px;
 }
-
-/*--------------------*/
-/* TEAM */
-/*--------------------*/
 
 #team {
     display: inline;
@@ -930,10 +866,6 @@ img {
     font-family: "Raleway", sans-serif;
 }
 
-/*--------------------*/
-/* SERVICE */
-/*--------------------*/
-
 #service {
     background-color: #F6F6F6;
     float: left;
@@ -1016,10 +948,6 @@ img {
 .single-service p {
     color: #878787;
 }
-
-/*--------------------*/
-/* PORTFOLIO */
-/*--------------------*/
 
 #portfolio {
     display: inline;
@@ -1308,10 +1236,6 @@ img {
 
 }
 
-/*--------------------*/
-/* COUNTER */
-/*--------------------*/
-
 #counter {
     display: inline;
     float: left;
@@ -1373,9 +1297,6 @@ img {
     margin-left: 5px;
 }
 
-/*--------------------*/
-/* Technology */
-/*--------------------*/
 #technology .tittle {
     color: white;
 }
@@ -1441,134 +1362,6 @@ img {
 .technology-table li:last-child {
     margin-right: 0px;
 }
-
-/*--------------------*/
-/* PRICING TABLE */
-/*--------------------*/
-
-#pricing-table {
-    display: inline;
-    float: left;
-    padding: 70px 0;
-    width: 100%;
-}
-
-.pricing-table-area {
-    display: inline;
-    float: left;
-    width: 100%;
-}
-
-.pricing-table-content {
-    display: inline;
-    float: left;
-    margin-top: 60px;
-    width: 100%;
-}
-
-.price-table {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-}
-
-.price-table li {
-    border-bottom: 1px solid #e4e4e4;
-    border-left: 1px solid #e4e4e4;
-    border-top: 1px solid #e4e4e4;
-    display: inline-block;
-    float: left;
-    padding-bottom: 12px;
-    width: 25%;
-}
-
-.price-table li:last-child {
-    border-right: 1px solid #e4e4e4;
-}
-
-.single-price {
-    display: inline;
-    float: left;
-    width: 100%;
-}
-
-.single-price .price-header {
-    color: #fff;
-    font-size: 28px;
-    margin: 0;
-    padding: 20px 0;
-    position: relative;
-    text-align: center;
-}
-
-.single-price .price-header::after {
-    bottom: -30%;
-    content: "";
-    font-family: fontAwesome;
-    font-size: 32px;
-    left: 46.5%;
-    position: absolute;
-}
-
-.standard-price .price-header::after {
-    bottom: -22%;
-}
-
-.single-price .price-amount {
-    display: block;
-    font-size: 32px;
-    font-weight: 600;
-    padding: 10px 0;
-    text-align: center;
-}
-
-.standard-price {
-    margin-top: -20px;
-}
-
-.standard-price .price-header {
-    padding: 30px 0px;
-}
-
-.single-price p {
-    color: #5d5d5d;
-    font-size: 18px;
-    border-bottom: 1px solid #e4e4e4;
-    padding: 20px 0;
-    margin-bottom: 0px;
-}
-
-.single-price p:last-of-type {
-    border: none;
-}
-
-.single-price a {
-    -moz-border-bottom-colors: none !important;
-    -moz-border-left-colors: none !important;
-    -moz-border-right-colors: none !important;
-    -moz-border-top-colors: none !important;
-    border-image: none !important;
-    border-left: medium none !important;
-    border-right: medium none !important;
-    border-top: medium none !important;
-    display: inline-block;
-    float: none;
-    margin-top: 23px;
-}
-
-.single-price a span {
-    border: medium none;
-    display: inline-block;
-    padding: 12px 65px;
-}
-
-.standard-price a {
-    color: #fff !important;
-}
-
-/*--------------------*/
-/* TESTIMONIAL */
-/*--------------------*/
 
 #testimonial {
     display: inline;
@@ -1702,10 +1495,6 @@ img {
     top: 35%;
 }
 
-/*--------------------*/
-/* FORM BLOG */
-/*--------------------*/
-
 #from-blog {
     background-color: #F6F6F6;
     display: inline;
@@ -1827,10 +1616,6 @@ img {
     padding: 4px 5px;
 }
 
-/*--------------------*/
-/* CLIENT */
-/*--------------------*/
-
 #client {
     background-color: #fff;
     display: inline;
@@ -1862,10 +1647,6 @@ img {
 .client-table li:last-child {
     margin-right: 0px;
 }
-
-/*--------------------*/
-/* CONTACT */
-/*--------------------*/
 
 #contact {
     background-image: url("../images/contact-bg.jpg");
@@ -1957,12 +1738,12 @@ img {
     font-size: 20px;
 }
 
-.contact-form .form-control:-moz-placeholder { /* Firefox 18- */
+.contact-form .form-control:-moz-placeholder {
     color: #e2e2e2;
     font-size: 20px;
 }
 
-.contact-form .form-control::-moz-placeholder { /* Firefox 19+ */
+.contact-form .form-control::-moz-placeholder {
     color: #e2e2e2;
     font-size: 20px;
 }
@@ -2097,10 +1878,6 @@ img {
     }
 }
 
-/*--------------------*/
-/* FOOTER */
-/*--------------------*/
-
 #footer {
     background-color: #242424;
     display: inline;
@@ -2207,10 +1984,6 @@ img {
     font-size: 18px;
     margin-bottom: 0px;
 }
-
-/*--------------------*/
-/* BLOG PAGE */
-/*--------------------*/
 
 #blog-banner {
     display: inline;
@@ -2645,12 +2418,12 @@ img {
     font-size: 18px;
 }
 
-.comment-form .form-control:-moz-placeholder { /* Firefox 18- */
+.comment-form .form-control:-moz-placeholder {
     color: #858585;
     font-size: 18px;
 }
 
-.comment-form .form-control::-moz-placeholder { /* Firefox 19+ */
+.comment-form .form-control::-moz-placeholder {
     color: #858585;
     font-size: 18px;
 }
@@ -2671,10 +2444,6 @@ img {
 .comment-form .button-default > span {
     padding: 12px 40px;
 }
-
-/*--------------------*/
-/* ERROR PAGE */
-/*--------------------*/
 
 #error-page {
     background-color: #CEFFFE;
@@ -2749,14 +2518,8 @@ img {
     color: #4b8181;
 }
 
-/*======================///////////////
-			start responsive style
-=====================///////////////////////*/
-
 @media (max-width: 1199px ) {
-    /*.header-content {  */
-    /*padding: 70px;  */
-    /*}*/
+
     .header-content h2 {
         font-size: 60px;
         line-height: 58px;
@@ -2883,9 +2646,6 @@ img {
 }
 
 @media (max-width: 991px ) {
-    /*.header-content {  */
-    /*padding: 50px;  */
-    /*}*/
     .header-content h2 {
         font-size: 50px;
         line-height: 50px;
@@ -3179,7 +2939,6 @@ img {
     }
 
     .about-left img {
-        /*height: 100%;*/
         width: 100%;
     }
 
@@ -3438,9 +3197,6 @@ img {
         margin: 20px auto 0;
     }
 
-    /*.client-table {  */
-    /*padding-left: 30px;*/
-    /*}*/
     .instagram-feed .slick-prev {
         left: 34%;
     }
@@ -3536,9 +3292,6 @@ img {
         padding: 7px 8px;
     }
 
-    /*#navbar {*/
-    /*width: 108.3%;*/
-    /*}*/
     .title-area {
         padding: 0 10px;
     }
@@ -3835,9 +3588,6 @@ img {
         height: 270px;
     }
 
-    /*#navbar {*/
-    /*width: 109%;*/
-    /*}*/
     .team-grid {
         padding: 0 35px;
     }

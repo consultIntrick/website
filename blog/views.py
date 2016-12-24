@@ -84,7 +84,7 @@ def subscribe_newsletter(request):
 def get_message_from_viewer(request):
     name = str(request.POST.get('name')).strip()
     email = str(request.POST.get('email')).strip()
-    message = str(request.POST.get('message')).strip()
+    message = str(request.POST.get('message').encode('ascii', 'ignore').replace('\n', ' ')).strip()
     ViewerMessage.objects.create(name=name, email=email, message=message)
     email_to_viewer = EmailMessage('Thank you! ' + name,
                                    'Hi ' + name + ',\r\n'
