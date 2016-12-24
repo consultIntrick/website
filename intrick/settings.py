@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'redactor',
     'blog',
     'hitcount',
-    # 'django_markdown'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -128,13 +127,15 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles/")
 
-# STATICFILES_LOCATION = 'static'
-# MEDIAFILES_LOCATION = 'media'
-
 MEDIA_ROOT = os.path.join(BASE_DIR, "static/media")
 MEDIA_URL = '/static/media/'
 
 REDACTOR_OPTIONS = {'lang': 'en'}
 REDACTOR_UPLOAD = 'uploads/'
 
-
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "info.intrick@gmail.com"
+EMAIL_HOST_PASSWORD = "Intrick@123"
+EMAIL_USE_TLS = True

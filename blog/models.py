@@ -1,8 +1,7 @@
-from django.conf import settings
 from django.contrib.auth.models import User
 from django.db import models
 from redactor.fields import RedactorField
-from hitcount.models import HitCount, HitCountMixin
+
 
 class AuditModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
@@ -33,3 +32,12 @@ class SubscriberNewsletter(AuditModel):
 
     def __str__(self):
         return self.email
+
+
+class ViewerMessage(AuditModel):
+    name = models.CharField(max_length=255)
+    email = models.EmailField(max_length=255)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.name + " (" + self.email + ")"

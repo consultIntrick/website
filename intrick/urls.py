@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^$', views.home_view, name='home_view'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'hitcount/', include('hitcount.urls', namespace='hitcount')),
+    url(r'get-message/', views.get_message_from_viewer, name='get_message')
 ]

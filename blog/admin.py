@@ -1,11 +1,6 @@
 from django.contrib import admin
-from models import Entry, SubscriberNewsletter
-# from redactor.widgets import RedactorEditor
-
-#
-# class EntryAdmin(admin.ModelAdmin):
-#     list_display = ['title']
+from models import Entry, SubscriberNewsletter, ViewerMessage
 
 admin.site.register(Entry)
 admin.site.register(SubscriberNewsletter)
-
+admin.site.register(ViewerMessage)

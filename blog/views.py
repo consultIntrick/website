@@ -1,13 +1,15 @@
-from django.shortcuts import render
-from models import Entry, SubscriberNewsletter
-from utils import get_paginated_objects
-from hitcount.models import HitCount
-from hitcount.views import HitCountMixin
-from hitcount.views import HitCountDetailView
-from hitcount import models as hit_models
-from django.http import HttpResponse, HttpResponseRedirect
 from itertools import chain
-import smtplib
+
+from django.core.mail import EmailMessage
+from django.http import HttpResponse
+from django.shortcuts import render
+from hitcount import models as hit_models
+from hitcount.models import HitCount
+from hitcount.views import HitCountDetailView
+from hitcount.views import HitCountMixin
+
+from models import Entry, SubscriberNewsletter, ViewerMessage
+from utils import get_paginated_objects
 
 
 class PostCountHitDetailView(HitCountDetailView):
@@ -25,23 +27,6 @@ def home_view(request):
         return render(request, template_name)
 
 
-def send_message(request):
-    fromaddr = 'praneshps1@gmail.com'
-    toaddrs  = 'kprabu@gladminds.co'
-    sub = 'jgjk'
-    msg = 'hai folders created'
-    # Credentials (if needed)
-    username = 'admin@int.com'
-    password = '******'
-
-    # The actual mail send
-    server = smtplib.SMTP('smtp.gmail.com:587')
-    server.starttls()
-    server.login(username,password)
-    server.sendmail(fromaddr, toaddrs, msg)
-    server.quit()
-
-
 def bloglist_view(request):
     """
         requests:page_num
@@ -56,7 +41,6 @@ def bloglist_view(request):
         result_2 = Entry.objects.filter(title__icontains=search_query).exclude(title__istartswith=search_query)
         blog_results = [list(chain(result_1, result_2))]
         all_blogs = blog_results[0]
-
     else:
         all_blogs = Entry.objects.all()
     page = request.GET.get('page')
@@ -81,7 +65,6 @@ def blog_view(request, blog_id, slug):
 def popular_post():
     popular_post_ids = hit_models.HitCount.objects.filter().order_by('-hits')[:3]. \
         values_list('object_pk', flat=True)
-    # popular_posts = Entry.objects.filter(id__in=popular_post_ids)
     popular_posts = []
     for post_id in popular_post_ids:
         popular_posts.append(Entry.objects.get(id=post_id))
@@ -96,3 +79,25 @@ def subscribe_newsletter(request):
             return HttpResponse('subscribed', status=200)
         else:
             return HttpResponse('exists', status=302)
+
+
+def get_message_from_viewer(request):
+    name = str(request.POST.get('name')).strip()
+    email = str(request.POST.get('email')).strip()
+    message = str(request.POST.get('message')).strip()
+    ViewerMessage.objects.create(name=name, email=email, message=message)
+    email_to_viewer = EmailMessage('Thank you! ' + name,
+                                   'Hi '+name+',\r\n'
+                                              '\r\nThanks for reaching us. Will get back to you shortly.\r\n'
+                                              '\r\n\r\nRegards,\r\n'
+                                              'Intrick Success Team\r\n',
+                                   'Intrick Success Team',
+                                   [email],
+                                   reply_to=['support@intrick.com'],)
+    email_to_viewer.send(fail_silently=False)
+    email_to_intrick = EmailMessage('A message from ' + name + "(" + email + ")",
+                                    message,
+                                    'Intrick Success Team',
+                                    ["info.intrick@gmail.com"])
+    email_to_intrick.send(fail_silently=False)
+    return HttpResponse('success', status=200)
