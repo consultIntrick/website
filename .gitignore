@@ -25,3 +25,4 @@ log/
 tmp/
 .idea/
 src/uploads/*
+*.sqlite3
