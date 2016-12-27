@@ -3,6 +3,7 @@ from itertools import chain
 from django.core.mail import EmailMessage
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.decorators.cache import never_cache
 from hitcount import models as hit_models
 from hitcount.models import HitCount
 from hitcount.views import HitCountDetailView
@@ -17,6 +18,7 @@ class PostCountHitDetailView(HitCountDetailView):
     count_hit = True
 
 
+@never_cache
 def home_view(request):
     try:
         recent_three_blogs = Entry.objects.all().order_by('-created_at')[:3]
