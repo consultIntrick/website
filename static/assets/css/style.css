@@ -28,7 +28,7 @@ img{border:none;}
 .header-content h2 span{font-weight:normal;line-height:93px;}
 .header-btn-area{margin-top:90px;float:left;display:inline;width:100%;text-align:center;}
 .header-btn-area a{margin:0px 15px;}
-.knowmore-btn{border:2px solid #fff;border-radius:2px;color:#fff;font-size:20px;font-weight:bold;font-family:'Raleway', sans-serif;text-transform:uppercase;padding:25px 28px;-webkit-transition:all 0.5s;-moz-transition:all 0.5s;-ms-transition:all 0.5s;-o-transition:all 0.5s;transition:all 0.5s;}
+.knowmore-btn{border:2px solid #fff;cursor:pointer;border-radius:2px;color:#fff;font-size:20px;font-weight:bold;font-family:'Raleway', sans-serif;text-transform:uppercase;padding:25px 28px;-webkit-transition:all 0.5s;-moz-transition:all 0.5s;-ms-transition:all 0.5s;-o-transition:all 0.5s;transition:all 0.5s;}
 .download-btn{border:2px solid #fff;border-radius:4px;color:#fff;font-size:20px;font-weight:bold;font-family:'Raleway', sans-serif;text-transform:uppercase;padding:25px 28px;-webkit-transition:all 0.5s;-moz-transition:all 0.5s;-ms-transition:all 0.5s;-o-transition:all 0.5s;transition:all 0.5s;}
 .knowmore-btn:hover,
 .knowmore-btn:focus,
