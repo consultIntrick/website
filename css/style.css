@@ -231,7 +231,7 @@ img{border:none;}
 .client-table li:last-child{margin-right:0px;}
 #contact{background-image:url("../images/contact-bg.jpg");background-position:center center;background-repeat:no-repeat;background-size:cover;display:inline;float:left;padding:70px 0;width:100%;}
 .contact-left{background-color:rgba(104, 102, 96, 0.85);display:inline;float:left;padding:30px 40px 10px;width:100%;}
-.contact-left h2{color:#fafafa;font-size:35px;margin-bottom:35px;}
+.contact-left h2{color:#fafafa;font-size:35px;}
 .single-address{display:inline;float:left;margin-bottom:15px;padding-right:50px;width:100%;}
 .single-address h4{color:#fafafa;font-size:22px;font-weight:bold;margin-bottom:17px;}
 .single-address p{color:#fafafa;font-size:14px;margin-bottom:5px;}
@@ -596,7 +596,7 @@ img{border:none;}
 .single-slide{padding:0 50px;}
 .introduction-btn{font-size:20px;}
 .header-content h2{margin-bottom:10px;}
-.contact-left h2, .contact-right h2{font-size:20px;margin-bottom:10px;}
+.contact-left h2, .contact-right h2{font-size:20px;}
 .single-address h4{font-size:18px;}
 .single-address p{font-size:13px;}
 .contact-right{padding:30px 20px;}
